@@ -1,5 +1,7 @@
 ## Run PostgreSQL (Docker)
 
+[![NuGet](https://img.shields.io/nuget/v/wk.RunPostgres.svg)](https://www.nuget.org/packages/wk.RunPostgres)
+
 ```bash
 dotnet tool install -g wk.RunPostgres
 wk-run-postgres
