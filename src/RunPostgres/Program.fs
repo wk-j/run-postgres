@@ -3,7 +3,7 @@ open StartProcess
 open System.IO
 
 let createDir() =
-    let dir = ".working/db"
+    let dir = ".working/postgres"
     if Directory.Exists dir |> not then
         Directory.CreateDirectory |> ignore
     DirectoryInfo(dir).FullName

@@ -5,7 +5,7 @@ using PS = StartProcess.Processor;
 using ProjectParser;
 
 var npi = EnvironmentVariable("npi");
-var name = "RunPostgres";
+var name = "RunMySql";
 
 var currentDir = new DirectoryInfo(".").FullName;
 var info = Parser.Parse($"src/{name}/{name}.fsproj");
@@ -20,7 +20,7 @@ Task("Pack").Does(() => {
 Task("Publish-NuGet")
     .IsDependentOn("Pack")
     .Does(() => {
-        var nupkg = new DirectoryInfo("publish").GetFiles("*.nupkg").LastOrDefault();
+        var nupkg = new DirectoryInfo("publish").GetFiles("*MySql*.nupkg").LastOrDefault();
         var package = nupkg.FullName;
         NuGetPush(package, new NuGetPushSettings {
             Source = "https://www.nuget.org/api/v2/package",
