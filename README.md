@@ -20,4 +20,7 @@ Host=localhost; User Id=root; Password=1234; Database=mysql
 ```bash
 dotnet cake build-postgres.cake -target=Install
 dotnet cake build-mysql.cake -target=Install
+
+dotnet cake build-postgres.cake -target-Publish-NuGet
+dotnet cake build-mysql.cake -target=Publish-NuGet
 ```
