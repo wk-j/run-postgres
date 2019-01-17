@@ -29,7 +29,7 @@ let main argv =
       "-e MYSQL_PASSWORD=1234"
       "-e MYSQL_DATABASE=mysql"
       "-p 3306:3306"
-      "mysql:5.5" ]
+      "mysql:5.7" ]
     |> String.concat " "
     |> Processor.StartProcess
 

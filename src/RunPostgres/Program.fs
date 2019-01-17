@@ -2,11 +2,18 @@
 open StartProcess
 open System.IO
 
+type Settings = {
+    Password: string
+    User: string
+    Port: string
+}
+
 let createDir() =
     let dir = ".working/postgres"
     if Directory.Exists dir |> not then
         Directory.CreateDirectory |> ignore
     DirectoryInfo(dir).FullName
+
 
 [<EntryPoint>]
 let main argv =
