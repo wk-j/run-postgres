@@ -6,6 +6,7 @@
 ```bash
 dotnet tool install -g wk.RunPostgres
 wk-run-postgres
+wk-run-postgres --user wk --password wk --port 5555
 ```
 
 ## Connection
